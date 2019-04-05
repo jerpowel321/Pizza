@@ -1,0 +1,37 @@
+<h1>Pizzas!</h1>
+
+<h2>Are you ready to order?</h2>
+
+<ul>
+  {{#each pizza}}
+    {{#unless devour}}
+      {{> pizzas/pizza-block devour=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Pizzas which have been devoured!</h2>
+
+<ul>
+  {{#each pizza}}
+    {{#if devour}}
+      {{> pizza/pizza-block devour=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Pizza</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="pizza">Pizza Name:</label>
+    <input type="text" id="pizza" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="eat">devour?</label><br>
+    <input type="radio" name="devour" value="1" checked> Devour!<br>
+  </div>
+
+  <button type="submit">Add Pizza</button>
+</form>
