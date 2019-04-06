@@ -3,20 +3,21 @@
 <h2>Are you ready to order?</h2>
 
 <ul>
-  {{#each pizza}}
-    {{#unless devour}}
-      {{> pizzas/pizza-block devour=true}}
+    {{#each pizza}}
+    {{#unless this.devoured}}
+    {{this.name}}
+    <button class="eatMe" data-id={{this.id}} data-state={{this.devoured}}> Eat Me!</button>
     {{/unless}}
-  {{/each}}
+    {{/each}}
 </ul>
 
 <h2>Pizzas which have been devoured!</h2>
 
 <ul>
   {{#each pizza}}
-    {{#if devour}}
-      {{> pizza/pizza-block devour=false}}
-    {{/if}}
+  {{#if this.devoured}}
+  {{this.name}}
+  {{/if}}
   {{/each}}
 </ul>
 
@@ -31,7 +32,8 @@
   <div class="form-group">
     <label for="eat">devour?</label><br>
     <input type="radio" name="devour" value="1" checked> Devour!<br>
+    <input type="radio" name="devour" value="0"> Not Devoured
   </div>
 
-  <button type="submit">Add Pizza</button>
+  <button id="submit" type="submit">Add Pizza</button>
 </form>
