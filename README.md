@@ -2,7 +2,7 @@
 
 ## Welcome to Eat-Da-Pizza!
 
-Eat-Da-Burger! is a restaurant app that lets users input the names of pizzas they'd like to eat.
+Eat-Da-Pizza! is a restaurant app that lets users input the names of pizzas they'd like to eat.
 
 When you first visit the webpage, you will see the following screen.
 <img src="public/assets/img/appScreenshot.png" alt="App Page">
