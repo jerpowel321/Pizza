@@ -7,15 +7,12 @@ $(function() {
     var newDevouredState = {
       devoured: newDevoured
     };
-console.table(newDevoured)
-console.table(id)
     // Send the PUT request.
     $.ajax("/api/pizzas/" + id, {
       type: "PUT",
       data: newDevouredState
     }).then(
       function() {
-        console.log("changed Devoured to", newDevoured);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -25,19 +22,16 @@ console.table(id)
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-    console.log("click")
     var newPizza = {
       name: $("#pizza").val().trim(),
       devoured: $("[name=devour]:checked").val().trim()
     };
-    console.log(newPizza)
     //Send the POST request.
     $.ajax("/api/pizzas", {
       type: "POST",
       data: newPizza
     }).then(
       function() {
-        console.log("created new pizza");
         // Reload the page to get the updated list
         location.reload();
       }

@@ -11,8 +11,6 @@ router.get("/", function(req, res) {
     var hbsObject = {
       pizza: data
     };
-    console.table(data)
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -30,11 +28,8 @@ router.post("/api/pizzas", function(req, res) {
 
 router.put("/api/pizzas/:id", function(req, res) {
   var condition = "id = " + req.params.id;
-
-  console.log("condition", condition);
-
   pizza.update({
-   devoured: req.body.devoured
+   devoured: 1
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404

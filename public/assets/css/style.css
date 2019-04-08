@@ -1,3 +1,99 @@
 body {
-    background-color: green;
+    background: rgb(181,148,105);
+    background: linear-gradient(0deg, rgba(181,148,105,1) 0%, rgba(222,184,135,1) 67%);
+    margin-bottom: 40px;
+}
+.eatMe {
+    width:100px;
+    float:right;
+    border:2px solid black;
+    margin:5px 20px 5px 0;
+}
+.slice{
+    width: 50px;
+    margin: 0 10px 0 20px;
+}
+
+.jumbotron {
+    height: 35vh;
+    overflow: hidden;
+    background-image: url(https://abjadih.com/wp-content/uploads/2018/08/award-winning-pizza-catering-no-video.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 0;
+}
+
+.card {
+    margin-top: 40px;
+  background-color: #FAFAD2;
+  border: 5px solid rgb(44, 42, 42);
+  border-radius: 10px;
+  box-shadow: 4px 3px black;
+  padding-bottom: 5px;
+  word-wrap: break-word;
+}
+
+p, h1, h2, .create-form, .card {
+    font-family: 'Space Mono', monospace;
+}
+.item {
+    background-color: #FAFAD2;
+}
+.card-header {
+    background-color:rgb(219, 148, 15);
+    margin-bottom: 5px;
+    text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 2px 2px black;
+    border-bottom: 2px solid black;
+}
+
+.order {
+    text-align: center;
+    margin: auto;
+    padding: 10px 5px;
+}
+
+.navbar {
+    border-bottom: 3px;
+    border-bottom-color: green;
+}
+.list {
+    width: 30px;
+}
+
+#pizza {
+    margin-left: 5px;
+}
+.devour {
+    margin-left: 5px;
+}
+#submit {
+    border:2px solid black;
+}
+#roller {
+    width: 30px;
+    margin: 0 7px;
+}
+#pizza {
+    width: 300px;
+    margin: 0 5px;
+}
+#order{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.title{
+    text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 2px 2px black;
+}
+#pizzaman {
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+#pizzaimg {
+    width: 40px;
+    margin: 0 7px;
 }

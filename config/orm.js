@@ -55,8 +55,6 @@ function printQuestionMarks(num) {
       queryString += printQuestionMarks(vals.length);
       queryString += ") ";
   
-      console.log(queryString);
-  
       connection.query(queryString, vals, function(err, result) {
         if (err) {
           throw err;
@@ -73,9 +71,6 @@ function printQuestionMarks(num) {
       queryString += objToSql(objColVals);
       queryString += " WHERE ";
       queryString += condition;
-      console.log("_---------" ,objColVals)
-        console.log(condition)
-      console.log(queryString);
       connection.query(queryString, function(err, result) {
         if (err) {
           throw err;
